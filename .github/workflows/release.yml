@@ -2,8 +2,8 @@
 # GitHub release build-<sha7> with one zip per pack and target (<packid>-<target>-<sha7>.zip, .mhkmod files as built).
 # The SDK comes from a sparse checkout of the game repository next to the mod, so the file: paths in
 # Packages/manifest.json resolve as on a modder's machine. Identity: the commit only, the build stamps the mod commit
-# and the SDK commit into the bundles (-mhkCommit, -mhkSdkCommit). Release title: "Build <run number> | <sha7>". Builds
-# upload straight into a draft release, the last job publishes.
+# and the SDK commit into the bundles (-mhkCommit, -mhkSdkCommit). Release title: "Build <commits on main> | <sha7>".
+# Builds upload straight into a draft release, the last job publishes.
 # Secrets: UNITY_LICENSE (contents of a Unity Personal .ulf file), UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL (Pro only),
 # GAME_REPO_TOKEN (read access to the game repository) only while it is private. Variables (optional): GAME_REPO
 # (default mhk-os/mhk-os), GAME_REF (default main), LIBRARY_CACHE (false turns the Library cache off).
@@ -37,10 +37,12 @@ jobs:
       sdk-commit: ${{ steps.sdk.outputs.commit }}
       sha7: ${{ steps.meta.outputs.sha7 }}
       tag: ${{ steps.meta.outputs.tag }}
+      number: ${{ steps.meta.outputs.number }}
     steps:
       - uses: actions/checkout@v7
         with:
           path: mod
+          fetch-depth: 0
           lfs: false
 
       # Every build uses the same SDK commit, also when GAME_REF moves during the run.
@@ -59,10 +61,14 @@ jobs:
         run: echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - id: meta
+        working-directory: mod
         run: |
           sha7="${GITHUB_SHA::7}"
-          echo "sha7=$sha7" >> "$GITHUB_OUTPUT"
-          echo "tag=build-$sha7" >> "$GITHUB_OUTPUT"
+          {
+            echo "sha7=$sha7"
+            echo "tag=build-$sha7"
+            echo "number=$(git rev-list --count HEAD)"
+          } >> "$GITHUB_OUTPUT"
 
       # The ContentPack assets in the project's packages.
       - id: packs
@@ -113,6 +119,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.meta.outputs.tag }}
           SHA7: ${{ steps.meta.outputs.sha7 }}
+          NUMBER: ${{ steps.meta.outputs.number }}
           PACKS: ${{ steps.packs.outputs.summary }}
           SDK_COMMIT: ${{ steps.sdk.outputs.commit }}
         run: |
@@ -124,7 +131,7 @@ jobs:
             echo
             git log -1 --format=%B
           } > "$notes"
-          gh release create "$TAG" --draft --target "$GITHUB_SHA" --title "Build $GITHUB_RUN_NUMBER | $SHA7" --notes-file "$notes"
+          gh release create "$TAG" --draft --target "$GITHUB_SHA" --title "Build $NUMBER | $SHA7" --notes-file "$notes"
 
   build:
     name: Build ${{ matrix.target }}
