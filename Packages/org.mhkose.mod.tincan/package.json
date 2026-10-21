@@ -1,0 +1,11 @@
+{
+  "name": "org.mhkose.mod.tincan",
+  "version": "1.0.0",
+  "displayName": "TINcan Race",
+  "description": "TINcan Race for Moorhuhn Kart: Open Source Edition: 8 tracks, 7 drivers, powerups and effects converted from the original game.",
+  "unity": "6000.6",
+  "license": "MIT",
+  "author": {
+    "name": "MHK:OSE"
+  }
+}

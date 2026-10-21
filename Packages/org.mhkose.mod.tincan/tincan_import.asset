@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33252150fea8d4e95a52223403d6f85d, type: 3}
+  m_Name: tincan_import
+  m_EditorClassIdentifier: MHK.Editor::MHK.Editor.Modding.Import.ExportImportSettings
+  exportFolder: /Users/skevo/Documents/code/mhk-work/export/tincan
+  pack: {fileID: 11400000, guid: 9ac464623532b42e7bb7e586f3747b3f, type: 2}
+  tracks: 1
+  characters: 1
+  karts: 0
+  onlyId: 
+  scale: 1
+  trackScales: []
+  itemBoxPrefab: {fileID: 6770075183207127768, guid: ec3ccae9ce5f54e178afb3379a48d517, type: 3}
+  fixedItems: []
+  ownItemsOnly: 0
+  defaultLaps: 3
+  defaultPathWidth: 10
+  widthSpikeFactor: 2.5
+  lightingSettings: {fileID: 4890085278179872738, guid: 6f0daf6b1c1ea47dda31fea83d73420f, type: 2}
+  groundMaterial: {fileID: 13400000, guid: a1b10fa16e933412aab1a81d7b8b0f03, type: 2}
+  wallMaterial: {fileID: 13400000, guid: 1a2fafeeb02384e9fae4fa24c461f49a, type: 2}
+  ambientScale: 3
+  lightScale: 1.3
+  fillScale: 1
+  sunShadowStrength: 0.5
+  killDepth: 15
+  boostPadEffectId: tincan.buff.speed_pad
+  slickEffectId: tincan.hit.oil_slick
+  crushEffectId: tincan.hit.crushed
+  squashEffectId: 
+  crushersAsTriggers: 1
+  movingWallsCrush: 1
+  fallDepth: 3
+  routesOnMinimap: 0
+  sunOverrides:
+  - trackId: tincan.entrancehall
+    position: {x: 143.3, y: 81.2, z: 40.7}
+    rotation: {x: -0.06108855, y: 0.6697961, z: -0.65702206, w: -0.340534}
+  propMassScale: 5
+  ambienceVolume: 0.6
+  ambienceMinDistance: 2
+  ambienceMaxDistance: 25
+  trackPhysics:
+    overrideSlopeGravity: 0
+    slopeGravityFactor: 1
+    gravityIntoGround: 0
+  maxCollisionEdge: 100
+  chunkLargeMeshes: 1
+  defaultKart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
+  characterKarts:
+  - characterId: tincan.tincan
+    kart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
+  - characterId: tincan.ballboy
+    kart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
+  - characterId: tincan.jet
+    kart: {fileID: 11400000, guid: b3de05ad54b80470094636cf80bb7909, type: 2}
+  - characterId: tincan.viper
+    kart: {fileID: 11400000, guid: b3de05ad54b80470094636cf80bb7909, type: 2}
+  - characterId: tincan.rudy
+    kart: {fileID: 11400000, guid: ad44981ff97404a7989968b228511769, type: 2}
+  - characterId: tincan.bob
+    kart: {fileID: 11400000, guid: ad44981ff97404a7989968b228511769, type: 2}
+  - characterId: tincan.mario
+    kart: {fileID: 11400000, guid: 520735d912a77484d8ecc87abc474236, type: 2}
+  characterScale: 0.6
+  portraitPattern: ui/portraits/{0}.png
+  previewPattern: 

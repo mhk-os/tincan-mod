@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbe57176b5e94ec1b5194f65ca6a278, type: 3}
+  m_Name: TINcan
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.ContentPack
+  packId: tincan
+  title: TINcan Race
+  author: Phenomedia (TINcan Race), MHK:OSE mod
+  version: 
+  description: Adds content from TINcan Race.
+  loadOrder: 100
+  includes: []
+  logo: {fileID: 2800000, guid: e107e1cfeb1044d4fb99190b1f6127dc, type: 3}
+  menuMusic: {fileID: 8300000, guid: 875098c28a7da417384cb16e1ebfc836, type: 3}
+  uiClick: {fileID: 0}
+  sharedPowerups:
+  - mhk2.shield
+  preferredDefaults: 0
+  engineLoop: {fileID: 0}
+  skidLoop: {fileID: 0}
+  crashSound: {fileID: 0}
+  landSound: {fileID: 0}
+  countdownSound: {fileID: 0}
+  goSound: {fileID: 0}
+  itemPickupSound: {fileID: 8300000, guid: de57afcc06c2b4b35a9ab97c19bfa35c, type: 3}
+  scratchSound: {fileID: 0}
+  offroadLoop: {fileID: 0}
+  content:
+  - {fileID: 11400000, guid: 3b62cabaa3d7d424a9d3cda7da853807, type: 2}
+  - {fileID: 11400000, guid: 508e90b9a88f64aaf84ee5b183dd60d3, type: 2}
+  - {fileID: 11400000, guid: 87de418df2f344556ba3d0578938d7de, type: 2}
+  - {fileID: 11400000, guid: a984074d6edf24cd0b07e4bfba48d20c, type: 2}
+  - {fileID: 11400000, guid: 430ade738b4044fd2bd1076536805e8d, type: 2}
+  - {fileID: 11400000, guid: 7dc4a128b083544a4a21a5986e348b23, type: 2}
+  - {fileID: 11400000, guid: 76f0e01a1ad6b46c796652e0664dd190, type: 2}
+  - {fileID: 11400000, guid: 334981368b1fe42b5a93f8f08dd5622f, type: 2}
+  - {fileID: 11400000, guid: 61ce7442fe5c8415ab60491efc8ad448, type: 2}
+  - {fileID: 11400000, guid: 3ba02c3ed57a74d7394418b0cee84887, type: 2}
+  - {fileID: 11400000, guid: f311319b097a440eb86efaa5178fce2a, type: 2}
+  - {fileID: 11400000, guid: 9bc3c8da879eb42ecb7e186ae1ee16d2, type: 2}
+  - {fileID: 11400000, guid: fa1585d89e1154a5fad4d7f8f0d43c4d, type: 2}
+  - {fileID: 11400000, guid: bc1f432bb76ab414ca773cd3127b7ac9, type: 2}
+  - {fileID: 11400000, guid: d7aea6bbefec240e5933397e0b428f8c, type: 2}
+  - {fileID: 11400000, guid: 6336626d42d9e449b936d3a732984d71, type: 2}
+  - {fileID: 11400000, guid: 709f1bdb130854e1da54363005904806, type: 2}
+  - {fileID: 11400000, guid: 25faa494c61d54bfda418cb5decec37d, type: 2}
+  - {fileID: 11400000, guid: 91842c7cfe0754d53babbfd18b309d7a, type: 2}
+  - {fileID: 11400000, guid: 4c947dd854b7e4b96bca8a85440aa73a, type: 2}
+  - {fileID: 11400000, guid: 8178acd0f05bf48f88417e4a19c09a4a, type: 2}
+  - {fileID: 11400000, guid: bef99686cf4ff4a6f936c1db67470ad9, type: 2}
+  - {fileID: 11400000, guid: 97442d6a9f0f24fefb51da87c4550d7f, type: 2}
+  - {fileID: 11400000, guid: 44704636885a941318465655f7639757, type: 2}
+  - {fileID: 11400000, guid: b6bc889726a314e4aad501e98377ebba, type: 2}
+  - {fileID: 11400000, guid: 285948bc7f6b3447488a58115b970774, type: 2}
+  - {fileID: 11400000, guid: 150ef22f60ee74158828bb989bdebf12, type: 2}
+  - {fileID: 11400000, guid: d5cd9eccec6f149309a8a5ba120eb668, type: 2}
+  - {fileID: 11400000, guid: 5492e8502977b440abfd3a21be8f4789, type: 2}
+  - {fileID: 11400000, guid: a24fdd812613544779d25168e59478ec, type: 2}
+  - {fileID: 11400000, guid: 7cbe178c2e1dc4f7882fb26caaf22066, type: 2}
+  - {fileID: 11400000, guid: c552dd7f28a4a4ffe8b7d1144fa8d9b1, type: 2}
+  sdkVersion: 
+  unityVersion: 
+  buildTarget: 
