@@ -1,0 +1,450 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225237f530a5e4a008a12ac79d56892f, type: 3}
+  m_Name: tincan_lighting
+  m_EditorClassIdentifier: MHK.Editor::MHK.Editor.Lighting.TrackLightingProfile
+  tracks:
+  - scene: {fileID: 102900000, guid: 4f36997294e35473dae54c792362a573, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 2.5
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Floodlight
+      objectPattern: scheinwerfer:*
+      materialPattern: lampe_leuchtmittel
+      glow: 1
+      glowColor: {r: 1.2, g: 1.1, b: 0.8, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 2
+      lightColor: {r: 1, g: 0.85, b: 0.6, a: 1}
+      lightIntensity: 300
+      lightRange: 80
+      spotAngle: 80
+      facing: 0
+      offset: 0.5
+      mergeDistance: 3
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 75582dc901df94e52bbc1551b967444c, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 1
+    sunRotation: {x: 67.19, y: 284.22, z: 70.54}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Ceiling lamp
+      objectPattern: lampen:*
+      materialPattern: deckenlampen_leuchtmittel
+      glow: 1
+      glowColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 45
+      lightRange: 30
+      spotAngle: 120
+      facing: 1
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Ground-floor window
+      objectPattern: fensterscheiben_eg:*
+      materialPattern: fensterscheiben_EG
+      glow: 1
+      glowColor: {r: 1, g: 0.97, b: 0.8, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 3
+      lightColor: {r: 1, g: 0.97, b: 0.85, a: 1}
+      lightIntensity: 4
+      lightRange: 30
+      spotAngle: 120
+      facing: 0
+      offset: 0.1
+      mergeDistance: 0.5
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Metal detector
+      objectPattern: warnlampen:*
+      materialPattern: metalldetektor_leuchte
+      glow: 1
+      glowColor: {r: 1.5, g: 0.1, b: 0.1, a: 1}
+      glowBake: 2
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 0ff613d78c4c94c1a94ecf5c272ccf7b, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Warning lamp
+      objectPattern: schilder:*
+      materialPattern: warnschild_lampe_main
+      glow: 1
+      glowColor: {r: 1, g: 0.6, b: 0.2, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 9e1340f9f9ab14d02936d1bcc46bfb78, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Ceiling lamp
+      objectPattern: deckenlampen:*
+      materialPattern: deckenlampe_leuchtmittel
+      glow: 1
+      glowColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 30
+      lightRange: 30
+      spotAngle: 120
+      facing: 1
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Ceiling light strip
+      objectPattern: 
+      materialPattern: decke_kante
+      glow: 1
+      glowColor: {r: 1.3, g: 1.3, b: 1.2, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 2800000, guid: 78b9127bb10434ce8a9f12c32c42a507, type: 3}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 20
+      lightRange: 20
+      spotAngle: 120
+      facing: 1
+      offset: 0.3
+      mergeDistance: 2.5
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Red lamp
+      objectPattern: warnlampen:*
+      materialPattern: lampe_rot
+      glow: 1
+      glowColor: {r: 1.5, g: 0.05, b: 0.05, a: 1}
+      glowBake: 2
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.1, b: 0.1, a: 1}
+      lightIntensity: 6
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1.5
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Screen
+      objectPattern: gegenstaende:*
+      materialPattern: screen_a|screen_b
+      glow: 1
+      glowColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 17d87fbdbe042460286cf2558410b7d7, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: skyline:*
+    emitters:
+    - label: Ceiling lamp
+      objectPattern: decke:*
+      materialPattern: "deckenlampe_leuchtmittel|deckenlampen_h\xF6rsaal_leuchtmittel|deckenlampen_h\xF6rsaal_leuchtmittel_gang"
+      glow: 1
+      glowColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 30
+      lightRange: 30
+      spotAngle: 120
+      facing: 1
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Projector
+      objectPattern: hoersaal:*
+      materialPattern: projektor_linse
+      glow: 1
+      glowColor: {r: 1.5, g: 1.4, b: 1.2, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 7aa904916344d4d44ae1ae393ec79cb9, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Ceiling lamp
+      objectPattern: deckenlampen:*
+      materialPattern: deckenlampe_leuchtmittel
+      glow: 1
+      glowColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 90
+      lightRange: 40
+      spotAngle: 120
+      facing: 1
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Window
+      objectPattern: fensterscheiben:*
+      materialPattern: fensterscheiben_waende
+      glow: 1
+      glowColor: {r: 1, g: 0.9, b: 0.55, a: 1}
+      glowBake: 3
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 9b1d8c332c6e5426aa2a21171a81d40e, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Floodlight
+      objectPattern: lampen:*
+      materialPattern: "h\xF6hle_scheinwerfer_innen"
+      glow: 1
+      glowColor: {r: 1.2, g: 1.2, b: 1.1, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 0.9, g: 0.95, b: 1, a: 1}
+      lightIntensity: 400
+      lightRange: 40
+      spotAngle: 120
+      facing: 0
+      offset: 0.5
+      mergeDistance: 3
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Wall lamp
+      objectPattern: lampen:*
+      materialPattern: wandlampe_1_main
+      glow: 1
+      glowColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.95, b: 0.82, a: 1}
+      lightIntensity: 150
+      lightRange: 25
+      spotAngle: 120
+      facing: 1
+      offset: 0.4
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Red lamp
+      objectPattern: lampen:*
+      materialPattern: lampe_rot
+      glow: 1
+      glowColor: {r: 1.5, g: 0.05, b: 0.05, a: 1}
+      glowBake: 2
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.1, b: 0.1, a: 1}
+      lightIntensity: 8
+      lightRange: 8
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 2
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Site lamp
+      objectPattern: baustellenlampen_leuchtmittel:*
+      materialPattern: warnschild_lampe_main
+      glow: 1
+      glowColor: {r: 1, g: 0.6, b: 0.2, a: 1}
+      glowBake: 2
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 1, g: 0.6, b: 0.25, a: 1}
+      lightIntensity: 15
+      lightRange: 8
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+    - label: Acid tube
+      objectPattern: glassrohre:*
+      materialPattern: glass_rohr
+      glow: 0
+      glowColor: {r: 1, g: 1, b: 1, a: 1}
+      glowBake: 1
+      glowMap: {fileID: 0}
+      lights: 1
+      lightColor: {r: 0.35, g: 1, b: 0.3, a: 1}
+      lightIntensity: 30
+      lightRange: 12
+      spotAngle: 120
+      facing: 0
+      offset: 0
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1
+  - scene: {fileID: 102900000, guid: 771ecd925cbc4460bbba52b5e0ee216e, type: 3}
+    bakedIndirect: 1
+    indirectIntensity: 1.3
+    minimum: 0.03
+    sunShadowStrength: 1
+    lightmapMaxSize: 512
+    overrideAmbient: 0
+    ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    overrideSunRotation: 0
+    sunRotation: {x: 0, y: 0, z: 0}
+    sunIntensity: -1
+    fillIntensity: -1
+    unbakedObjects: 
+    emitters:
+    - label: Window
+      objectPattern: fensterscheiben:*
+      materialPattern: fensterscheiben
+      glow: 1
+      glowColor: {r: 0.8, g: 0.95, b: 1, a: 1}
+      glowBake: 6
+      glowMap: {fileID: 0}
+      lights: 0
+      lightColor: {r: 1, g: 1, b: 1, a: 1}
+      lightIntensity: 2
+      lightRange: 10
+      spotAngle: 120
+      facing: 0
+      offset: 0.3
+      mergeDistance: 1
+      minArea: 0
+      shadowRadius: 0.1

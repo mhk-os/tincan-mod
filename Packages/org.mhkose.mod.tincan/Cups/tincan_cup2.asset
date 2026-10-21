@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d01db3fa7d4b658cc3d3cc1b486c8, type: 3}
+  m_Name: tincan_cup2
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.CupDefinition
+  id: tincan.cup2
+  displayName: Championship 2
+  sourceGame: tincan
+  icon: {fileID: 0}
+  hidden: 0
+  tracks:
+  - {fileID: 11400000, guid: 430ade738b4044fd2bd1076536805e8d, type: 2}
+  - {fileID: 11400000, guid: 7dc4a128b083544a4a21a5986e348b23, type: 2}
+  - {fileID: 11400000, guid: 76f0e01a1ad6b46c796652e0664dd190, type: 2}
+  - {fileID: 11400000, guid: 334981368b1fe42b5a93f8f08dd5622f, type: 2}
+  lapsOverride: 0
+  order: 101
