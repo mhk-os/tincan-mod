@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406dd5013b73f4e1cb534c1918c06502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Powerups.AreaEffectPowerup
+  soundVolume: 1
   radius: 17.14
   gravity: 0
   coreRadius: 8
@@ -64,7 +65,6 @@ MonoBehaviour:
     maxDistance: 40
   hitSound: {fileID: 0}
   expireSound: {fileID: 0}
-  soundVolume: 1
 --- !u!1001 &7932453889015258054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,6 +76,10 @@ PrefabInstance:
     - target: {fileID: 3992804625155889491, guid: 27e69faea04914a0d890acded1683b8a, type: 3}
       propertyPath: m_Name
       value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064729643718907571, guid: 27e69faea04914a0d890acded1683b8a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5389175757765196340, guid: 27e69faea04914a0d890acded1683b8a, type: 3}
       propertyPath: m_LocalScale.x
@@ -91,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389175757765196340, guid: 27e69faea04914a0d890acded1683b8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: -0.67857134
       objectReference: {fileID: 0}
     - target: {fileID: 5389175757765196340, guid: 27e69faea04914a0d890acded1683b8a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -159,3 +163,5 @@ MonoBehaviour:
   amplitude: 0.08
   frequency: 9
   growIn: 0
+  axisWobble: {x: 0, y: 0, z: 0}
+  axisFrequency: {x: 1, y: 1, z: 1}
