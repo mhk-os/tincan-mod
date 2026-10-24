@@ -147,10 +147,6 @@ jobs:
       matrix:
         target: [StandaloneOSX, StandaloneLinux64, StandaloneWindows64, Android]
     steps:
-      - uses: jlumbroso/free-disk-space@v2.0.0
-        with:
-          large-packages: false
-
       - uses: actions/checkout@v7
         with:
           path: mod
