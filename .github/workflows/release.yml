@@ -1,16 +1,17 @@
 # Release: builds the ContentPack of this mod project for each BuildTarget and publishes a GitHub release with one zip
 # per target (<packid>-<target>-<sha7>.zip, holding the mod folder <packid>/ with the .mhkmod bundles and, on desktop
-# targets, Assets/) and mod.json (pack id, title, description, commit, sdkCommit, sdkBuild, targets), which the game
-# reads to find, install and update the mod. Runs on a push to main (SDK: the game's GAME_REF, default main), on the
-# game's repository_dispatch game-release after each game release (SDK: the game commit in client_payload.sdk_commit)
-# and by hand (optional sdk_commit, force).
+# targets, Assets/) and mod.json (pack id, title, description, commit, sdkCommit, sdkBuild, sdkApi, targets), which the
+# game reads to find, install and update the mod. Runs on a push to main and by hand (force), with the SDK of the
+# game's GAME_REF (default main). Mods release on their own: after an SDK change that breaks mods, push or run this.
 # One release per mod commit and SDK: tag build-<sha7>-sdk<sdkBuild>, title "Build <n> | <sha7> | SDK <sdkBuild>",
-# sdkBuild = commits on the game's main at the SDK commit (the game's build number). A game only installs releases with
-# sdkBuild up to its own build number, so older games keep the release built for their SDK. A run is skipped when the
-# newest release of the same mod commit was built with an identical SDK folder (Packages/org.mhkose.sdk), force
-# rebuilds anyway. The SDK comes from a checkout of the game repository next to the mod, so the file: paths in
-# Packages/manifest.json resolve as on a modder's machine. Builds upload straight into a draft release, the last job
-# adds mod.json, publishes and removes caches superseded by a newer key for at least three hours.
+# sdkBuild = commits on the game's main at the SDK commit (the game's build number), sdkApi = the mod API level of the
+# SDK (ModSdk.ApiLevel). A game installs only releases with its own API level (games from before the API level only
+# those with sdkBuild up to their own build number) and lists an installed mod of another level as incompatible. A run
+# is skipped when the newest release of the same mod commit was built with an identical SDK folder
+# (Packages/org.mhkose.sdk), force rebuilds anyway. The SDK comes from a checkout of the game repository next to the
+# mod, so the file: paths in Packages/manifest.json resolve as on a modder's machine. Builds upload straight into a
+# draft release, the last job adds mod.json, publishes and removes caches superseded by a newer key for at least
+# three hours.
 # Secrets: UNITY_LICENSE (contents of a Unity Personal .ulf file), UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL (Pro only),
 # GAME_REPO_TOKEN (read access to the game repository) only while it is private. Variables (optional): GAME_REPO
 # (default mhk-os/mhk-os), GAME_REF (default main), LIBRARY_CACHE (false turns the Library cache off).
@@ -19,14 +20,8 @@ name: Release
 on:
   push:
     branches: [main]
-  repository_dispatch:
-    types: [game-release]
   workflow_dispatch:
     inputs:
-      sdk_commit:
-        description: Game commit whose SDK the mod is built with (empty for GAME_REF)
-        required: false
-        default: ''
       force:
         description: Build even when a release of this mod commit has the same SDK
         type: boolean
@@ -41,7 +36,7 @@ permissions:
 
 env:
   GAME_REPO: ${{ vars.GAME_REPO || 'mhk-os/mhk-os' }}
-  GAME_REF: ${{ github.event.client_payload.sdk_commit || inputs.sdk_commit || vars.GAME_REF || 'main' }}
+  GAME_REF: ${{ vars.GAME_REF || 'main' }}
 
 jobs:
   resolve:
@@ -51,6 +46,7 @@ jobs:
       sdk-commit: ${{ steps.sdk.outputs.commit }}
       sdk7: ${{ steps.sdk.outputs.sha7 }}
       sdk-build: ${{ steps.sdk.outputs.build }}
+      sdk-api: ${{ steps.sdk.outputs.api }}
       sha7: ${{ steps.meta.outputs.sha7 }}
       tag: ${{ steps.meta.outputs.tag }}
       title: ${{ steps.meta.outputs.title }}
@@ -70,7 +66,7 @@ jobs:
           token: ${{ secrets.GAME_REPO_TOKEN || github.token }}
           path: mhk-os
           fetch-depth: 0
-          sparse-checkout: Packages/org.mhkose.sdk/package.json
+          sparse-checkout: Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs
           sparse-checkout-cone-mode: false
           lfs: false
 
@@ -78,10 +74,13 @@ jobs:
         working-directory: mhk-os
         run: |
           commit=$(git rev-parse HEAD)
+          api=$(sed -nE 's/.*const int ApiLevel = ([0-9]+);.*/\1/p' Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs)
+          if [ -z "$api" ]; then echo "::error::No ApiLevel in Packages/org.mhkose.sdk/Runtime/Modding/ModSdk.cs of $commit"; exit 1; fi
           {
             echo "commit=$commit"
             echo "sha7=${commit::7}"
             echo "build=$(git rev-list --count HEAD)"
+            echo "api=$api"
           } >> "$GITHUB_OUTPUT"
 
       - id: meta
@@ -202,12 +201,13 @@ jobs:
           PACK: ${{ steps.packs.outputs.pack }}
           SDK_COMMIT: ${{ needs.resolve.outputs.sdk-commit }}
           SDK_BUILD: ${{ needs.resolve.outputs.sdk-build }}
+          SDK_API: ${{ needs.resolve.outputs.sdk-api }}
         run: |
           if gh release view "$TAG" > /dev/null 2>&1; then exit 0; fi
           notes="$RUNNER_TEMP/notes.txt"
           {
             echo "$(jq -r .title <<< "$PACK"), commit $GITHUB_SHA"
-            echo "Built with the SDK of $GAME_REPO $SDK_COMMIT (game build $SDK_BUILD), needs that game build or newer."
+            echo "Built with the SDK of $GAME_REPO $SDK_COMMIT (game build $SDK_BUILD, mod API level $SDK_API), for games with that API level."
             echo
             git log -1 --format=%B
           } > "$notes"
@@ -315,12 +315,13 @@ jobs:
           SHA7: ${{ needs.resolve.outputs.sha7 }}
           SDK7: ${{ needs.resolve.outputs.sdk7 }}
           SDK_BUILD: ${{ needs.resolve.outputs.sdk-build }}
+          SDK_API: ${{ needs.resolve.outputs.sdk-api }}
           TARGETS: StandaloneOSX StandaloneWindows64 StandaloneLinux64 Android
         run: |
           json="$RUNNER_TEMP/mod.json"
           jq -n --argjson pack "$PACK" --arg commit "$SHA7" --arg sdkCommit "$SDK7" --argjson sdkBuild "$SDK_BUILD" \
-            --arg targets "$TARGETS" \
-            '$pack + {commit: $commit, sdkCommit: $sdkCommit, sdkBuild: $sdkBuild,
+            --argjson sdkApi "$SDK_API" --arg targets "$TARGETS" \
+            '$pack + {commit: $commit, sdkCommit: $sdkCommit, sdkBuild: $sdkBuild, sdkApi: $sdkApi,
               targets: ($targets | split(" ") | map({key: ., value: "\($pack.packId)-\(.)-\($commit).zip"}) | from_entries)}' > "$json"
           cat "$json"
           assets=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name')
