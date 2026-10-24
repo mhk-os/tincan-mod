@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c78bb2195e2b48ddb85963d5dbeff59, type: 3}
+  m_Name: jet
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.CharacterDefinition
+  id: tincan.jet
+  displayName: Jet
+  sourceGame: tincan
+  icon: {fileID: 0}
+  hidden: 0
+  driverPrefab: {fileID: 5136312849555253218, guid: b948022b388ff49ab8b6153342168010, type: 3}
+  modelScale: 0.6
+  portrait: {fileID: 2800000, guid: 631b0e34a2e564de4a115a4f98a43334, type: 3}
+  defaultKart: {fileID: 11400000, guid: b3de05ad54b80470094636cf80bb7909, type: 2}
+  specialPowerup: {fileID: 0}
+  animations:
+  - role: 0
+    clip: {fileID: -8400743195675850333, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 1
+    speed: 1
+  - role: 1
+    clip: {fileID: -8400743195675850333, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 1
+    speed: 1
+  - role: 5
+    clip: {fileID: -5306331113085084208, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 0.5
+  - role: 6
+    clip: {fileID: 8024200949664028885, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 0.5
+  - role: 3
+    clip: {fileID: -3147423237026548269, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 0
+  - role: 25
+    clip: {fileID: -5555189196813805302, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 3
+    speed: 0
+  - role: 26
+    clip: {fileID: -1265343845020909650, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 3
+    speed: 0
+  - role: 4
+    clip: {fileID: -2962923839800418608, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 19
+    clip: {fileID: -1334604639325332110, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 13
+    clip: {fileID: -7172225183055838154, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 20
+    clip: {fileID: -7282187079265040911, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 21
+    clip: {fileID: -2463721830190876333, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 23
+    clip: {fileID: 3959303297868065894, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 0
+  - role: 28
+    clip: {fileID: -3101037012378551135, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 29
+    clip: {fileID: -4243439747337608595, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 30
+    clip: {fileID: -7447667735010705095, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  - role: 31
+    clip: {fileID: -3978361760557812063, guid: 6d00128b8912b4bec910bda5c1319892, type: 2}
+    playback: 0
+    speed: 1
+  voices: []

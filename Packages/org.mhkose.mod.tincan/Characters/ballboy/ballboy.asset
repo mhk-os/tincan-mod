@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c78bb2195e2b48ddb85963d5dbeff59, type: 3}
+  m_Name: ballboy
+  m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.CharacterDefinition
+  id: tincan.ballboy
+  displayName: Ballboy
+  sourceGame: tincan
+  icon: {fileID: 0}
+  hidden: 0
+  driverPrefab: {fileID: 2209768190392556929, guid: 260e9db66d1ff4dd386af17f2f481b98, type: 3}
+  modelScale: 0.6
+  portrait: {fileID: 2800000, guid: 051b43631f31f450fbbe16eaeb6a3c02, type: 3}
+  defaultKart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
+  specialPowerup: {fileID: 0}
+  animations:
+  - role: 0
+    clip: {fileID: -217538662514737856, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 1
+    speed: 1
+  - role: 1
+    clip: {fileID: -217538662514737856, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 1
+    speed: 1
+  - role: 5
+    clip: {fileID: 3702953066100378567, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 0.5
+  - role: 6
+    clip: {fileID: -1394197556028643944, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 0.5
+  - role: 3
+    clip: {fileID: -4265605790270095182, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 0
+  - role: 25
+    clip: {fileID: 6931807907707143148, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 3
+    speed: 0
+  - role: 26
+    clip: {fileID: -7548644489635397956, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 3
+    speed: 0
+  - role: 4
+    clip: {fileID: -6072185446376494117, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 19
+    clip: {fileID: -3630997590567174181, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 13
+    clip: {fileID: -3608433549298705603, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 20
+    clip: {fileID: -2685455672728545231, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 21
+    clip: {fileID: -7637602734761125949, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 23
+    clip: {fileID: -1208437300619057843, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 0
+  - role: 28
+    clip: {fileID: -2196397586427706384, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 29
+    clip: {fileID: -2308876912800872366, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 30
+    clip: {fileID: 1951026064112498158, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  - role: 31
+    clip: {fileID: 5813035287851273523, guid: 4c8baac3ba4da439c899f2b04f4e5d0e, type: 2}
+    playback: 0
+    speed: 1
+  voices: []
