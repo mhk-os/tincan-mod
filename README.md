@@ -1,6 +1,6 @@
 # tincan-mod
 
-TINcan Race as a mod for Moorhuhn Kart: Open Source Edition, with 8 tracks, 7 drivers, powerups and effects converted from the original game. Every push to main builds the mod for Windows, macOS, Linux and Android and publishes it as a GitHub release. To install it, copy the two .mhkmod files of your platform into the Mods folder of the game.
+TINcan Race as a mod for Moorhuhn Kart: Open Source Edition, with 8 tracks, 7 drivers, powerups and effects converted from the original game. Every push to main builds the mod for Windows, macOS, Linux and Android and publishes it as a GitHub release. To install it, put the zip of your platform into the Mods folder of the game.
 
 ## License
 

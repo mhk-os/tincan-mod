@@ -1,9 +1,11 @@
 # Release: every push to main builds every ContentPack of this mod project for each BuildTarget and publishes the
-# GitHub release build-<sha7> with one zip per pack and target (<packid>-<target>-<sha7>.zip, .mhkmod files as built).
+# GitHub release build-<sha7> with one zip per pack and target (<packid>-<target>-<sha7>.zip). A zip holds the mod
+# folder as the player puts it into Mods/: <packid>/ with the .mhkmod bundles and, on desktop targets, Assets/.
 # The SDK comes from a sparse checkout of the game repository next to the mod, so the file: paths in
 # Packages/manifest.json resolve as on a modder's machine. Identity: the commit only, the build stamps the mod commit
 # and the SDK commit into the bundles (-mhkCommit, -mhkSdkCommit). Release title: "Build <commits on main> | <sha7>".
-# Builds upload straight into a draft release, the last job publishes.
+# Builds upload straight into a draft release, the last job publishes it and removes caches superseded by a newer key
+# for at least three hours (LFS and Library caches share the 10 GB repository cache).
 # Secrets: UNITY_LICENSE (contents of a Unity Personal .ulf file), UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL (Pro only),
 # GAME_REPO_TOKEN (read access to the game repository) only while it is private. Variables (optional): GAME_REPO
 # (default mhk-os/mhk-os), GAME_REF (default main), LIBRARY_CACHE (false turns the Library cache off).
@@ -209,15 +211,13 @@ jobs:
           PACKS: ${{ needs.prepare.outputs.packs }}
           SHA7: ${{ needs.prepare.outputs.sha7 }}
         run: |
-          shopt -s nullglob
           sudo chown -R "$(id -u):$(id -g)" mod/Builds
           IFS=, read -ra packs <<< "$PACKS"
+          cd "mod/Builds/Mods/$TARGET"
           for pack in "${packs[@]}"; do
-            id=$(sed -n 's/^  packId: *//p' "mod/$pack" | tr -d '\r')
-            cd "mod/Builds/Mods/$TARGET"
-            if [ ! -f "$id.mhkmod" ]; then echo "::error::$id.mhkmod was not built for $TARGET"; exit 1; fi
-            zip -X "$RUNNER_TEMP/$id-$TARGET-$SHA7.zip" "$id.mhkmod" "$id".*.mhkmod
-            cd "$GITHUB_WORKSPACE"
+            id=$(sed -n 's/^  packId: *//p' "$GITHUB_WORKSPACE/mod/$pack" | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+            if [ ! -f "$id/$id.mhkmod" ]; then echo "::error::$id.mhkmod was not built for $TARGET"; exit 1; fi
+            zip -r -X -q "$RUNNER_TEMP/$id-$TARGET-$SHA7.zip" "$id"
           done
 
       - name: Upload to the draft release
@@ -233,8 +233,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     steps:
       - env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ needs.prepare.outputs.tag }}
         run: gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+
+      - name: Remove superseded caches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh cache list --repo "$GITHUB_REPOSITORY" --limit 1000 --json id,key,createdAt,lastAccessedAt |
+            jq -r 'map(select(.key | test("-[0-9a-f]{64}$"))) | group_by(.key | sub("-[0-9a-f]{64}$"; ""))
+              | map(sort_by(.createdAt) | .[:-1][]) | .[]
+              | select((.lastAccessedAt | sub("\\.[0-9]+"; "") | fromdateiso8601) < (now - 10800)) | .id' |
+            while read -r id; do gh cache delete --repo "$GITHUB_REPOSITORY" "$id"; done
