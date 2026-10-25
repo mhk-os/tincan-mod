@@ -60,7 +60,7 @@ MonoBehaviour:
   followOwner: 1
   idleLoop:
     clip: {fileID: 8300000, guid: e41e765c8dd5a40af9287951487f137b, type: 3}
-    volume: 1
+    volume: 0.5
     minDistance: 1
     maxDistance: 40
   hitSound: {fileID: 0}

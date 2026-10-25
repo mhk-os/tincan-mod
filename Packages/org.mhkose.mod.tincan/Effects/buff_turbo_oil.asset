@@ -29,6 +29,7 @@ MonoBehaviour:
   forwardImpulse: 0
   velocityRetain: 1
   velocityDamping: 0
+  snapToTopSpeed: 1
   lockControls: 0
   forceThrottle: 0
   blockThrottle: 0
