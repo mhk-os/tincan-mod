@@ -43,11 +43,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DstBlend: 1
     - _Emission: 0
     - _FlipbookOn: 0
+    - _Fog: 1
     - _GlowBake: 1
     - _GlowOn: 0
     - _IgnoreSunShadows: 0
@@ -56,8 +57,8 @@ Material:
     - _VertexTint: 0
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.9922, g: 0.9843, b: 0.7333, a: 1}
-    - _Color: {r: 0.9922, g: 0.9843, b: 0.7333, a: 1}
+    - _BaseColor: {r: 0.9804, g: 0.9725, b: 0.5882, a: 1}
+    - _Color: {r: 0.9804, g: 0.9725, b: 0.5882, a: 1}
     - _Flipbook: {r: 0, g: 0, b: 0, a: 0}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}

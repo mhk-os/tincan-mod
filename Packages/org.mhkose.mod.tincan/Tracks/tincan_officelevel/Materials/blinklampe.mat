@@ -47,8 +47,9 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _Emission: 1
+    - _Emission: 0
     - _FlipbookOn: 1
+    - _Fog: 1
     - _GlowBake: 1
     - _GlowOn: 0
     - _IgnoreSunShadows: 0
