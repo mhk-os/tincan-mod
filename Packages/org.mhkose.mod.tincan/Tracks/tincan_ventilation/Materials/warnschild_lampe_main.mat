@@ -49,6 +49,7 @@ Material:
     - _DstBlend: 0
     - _Emission: 1
     - _FlipbookOn: 0
+    - _Fog: 1
     - _GlowBake: 2
     - _GlowOn: 1
     - _IgnoreSunShadows: 0
