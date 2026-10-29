@@ -22,8 +22,6 @@ MonoBehaviour:
   logo: {fileID: 2800000, guid: e107e1cfeb1044d4fb99190b1f6127dc, type: 3}
   menuMusic: {fileID: 8300000, guid: 875098c28a7da417384cb16e1ebfc836, type: 3}
   uiClick: {fileID: 0}
-  sharedPowerups:
-  - mhk2.shield
   preferredDefaults: 0
   engineLoop: {fileID: 0}
   skidLoop: {fileID: 0}
