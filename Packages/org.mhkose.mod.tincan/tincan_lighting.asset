@@ -113,7 +113,7 @@ MonoBehaviour:
     bakedIndirect: 1
     indirectIntensity: 1
     minimum: 0.03
-    sunShadowStrength: 1
+    sunShadowStrength: 0.6
     lightmapMaxSize: 512
     overrideAmbient: 0
     ambientColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
