@@ -6,6 +6,10 @@ TINcan Race as a mod for Moorhuhn Kart: Open Source Edition, with 8 tracks, 7 dr
 
 Music (including menu/title/highscore cues) is normalized per song to -16 LUFS. Effects use one attenuation-only gain per source game, matching group medians to the quietest source while preserving intentional differences between cues; borrowed clips follow their source game's gain. Decoded peaks stay below 0 dBFS. Local cue gains and track music volumes are unchanged.
 
+## Items and stage hazards
+
+The Self Guiding Missile always launches forwards, including while looking backwards. Stage crushers flatten the kart and driver with the run-over squash instead of starting a character death animation; their existing hit duration and respawn behavior are unchanged.
+
 ## Racing paths
 
 Racing paths are stored in the track scenes. They run in the middle of the drivable road, and their widths span it: on Warehouse and Production the painted road and the conveyor belts bound the main path, on the other tracks the walls, ledges and floor edges do. Where the floor opens into a hall, a junction or the gaps between pillars, the width keeps to the driving corridor. Production's main path follows the painted S-bend instead of cutting across the floor beside it. Alternate routes keep their shortcuts across the open floor and join the main path at its middle. Straight sections use fewer nodes; bends, doorways and checkpoints keep more.

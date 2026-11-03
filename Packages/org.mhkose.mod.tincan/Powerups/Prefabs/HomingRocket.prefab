@@ -82,6 +82,7 @@ MonoBehaviour:
   expireSound: {fileID: 8300000, guid: deed2770c38b34340a17d1d966f4b757, type: 3}
   deceleration: 0
   ignoreOwnerSpeed: 0
+  allowBackwards: 0
   ownerImmunity: 12
   followGround: 1
   hoverHeight: 0.6
