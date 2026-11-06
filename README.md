@@ -10,6 +10,19 @@ Music (including menu/title/highscore cues) is normalized per song to -16 LUFS. 
 
 The Self Guiding Missile always launches forwards, including while looking backwards. Stage crushers flatten the kart and driver with the run-over squash instead of starting a character death animation; their existing hit duration and respawn behavior are unchanged.
 
+Every race track has two special item boxes (the SDK's `SpecialItemBox`, `@special`), placed like the special boxes on the Moorhuhn Kart tracks: alone, at least 35 m from the random box rows, on drivable floor at the special box's own height above the ground, and never across the whole road. One sits in the middle of an alternative route (the scene's racing-path route named in brackets), so only drivers who take that way can grab it; the other sits on the main road about half a lap away, on the exit of a bend and to one side of the line, so taking it is a choice:
+
+- Courtyard: on the wide loop that leaves the main road late in the lap (Route 1), and after the bend at about a third of the lap.
+- Entrance Hall: on the long alternative route soon after the start (Route 2), and after the bend at about 60 % of the lap.
+- Forecourt: on the shortcut across the open floor late in the lap (Route 3), and after the bend at about a quarter of the lap.
+- Laboratory: on the early shortcut (Route 2), and after the sharp bend at about 60 % of the lap.
+- Office Level: on the shortcut late in the lap (Route 4), and at the foot of the ramp at about a quarter of the lap.
+- Production: at the start of the floor shortcut that skips the conveyor belts (Route 1), and after the bend at about 60 % of the lap.
+- Ventilation: on the raised alternative route (Route 1), and after the sharp bend at about 80 % of the lap.
+- Warehouse: on the long shortcut late in the lap (Route 2), and after the bend at about a quarter of the lap.
+
+A special box gives the driver's special powerup, or a random one to drivers without a special (the TINcan drivers have none). Battles keep special boxes.
+
 ## Racing paths
 
 Racing paths are stored in the track scenes. They run in the middle of the drivable road, and their widths span it: on Warehouse and Production the painted road and the conveyor belts bound the main path, on the other tracks the walls, ledges and floor edges do. Where the floor opens into a hall, a junction or the gaps between pillars, the width keeps to the driving corridor. Production's main path follows the painted S-bend instead of cutting across the floor beside it. Alternate routes keep their shortcuts across the open floor and join the main path at its middle. Straight sections use fewer nodes; bends, doorways and checkpoints keep more.
