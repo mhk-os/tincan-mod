@@ -31,6 +31,10 @@ Racing paths are stored in the track scenes. They run in the middle of the driva
 
 Lighting is set per track in `tincan_lighting.asset` and baked with the SDK's track light baker. Tracks with sunlight keep the sun's shadows at 60 % strength, so shaded road stays readable. In Ventilation, a realtime light flashes the transformer room in step with the lightning arcs: `Props/traforaum_flash` plays `traforaum_flash.anim` on the arcs' race-clock cycle. It is placed by hand, so re-importing the track removes it.
 
+## Track variants
+
+Every track can be driven in reverse. Courtyard and Forecourt, the outdoor tracks, also have a time of day and a rain option. The overlay definitions are in each track's `Variants` folder, the overlay scenes (`<track>.night.unity`, `<track>.day.unity`, `<track>.rain.unity`, `<track>.snow.unity`, `<track>.sandstorm.unity`, `<track>.reverse.unity`) next to the track scene, the cover map for rain (`<track>.cover.asset`) beside them and the generated night, day, rain, snow and sandstorm skies in `Textures/Sky`. Night overlays darken the sun and ambient light and turn the karts' headlights on; rain adds rain with thunder, wet uncovered ground and less grip outdoors; snow adds snowfall and a little less grip outdoors; a sandstorm adds thick dusty fog and blowing sand. Reverse overlays turn the speed pad arrows round.
+
 ## License
 
 MIT. Game assets belong to their respective owners. If there is a problem with any of them, message me and I will remove it.
