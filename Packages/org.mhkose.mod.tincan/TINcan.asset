@@ -22,6 +22,11 @@ MonoBehaviour:
   logo: {fileID: 2800000, guid: e107e1cfeb1044d4fb99190b1f6127dc, type: 3}
   menuMusic: {fileID: 8300000, guid: 875098c28a7da417384cb16e1ebfc836, type: 3}
   uiClick: {fileID: 0}
+  itemBoxLook:
+    model: {fileID: 0}
+    spinSpeed: 0
+    trackHeight: 0
+    scale: 1
   preferredDefaults: 0
   engineLoop: {fileID: 0}
   skidLoop: {fileID: 0}
@@ -65,6 +70,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a24fdd812613544779d25168e59478ec, type: 2}
   - {fileID: 11400000, guid: 7cbe178c2e1dc4f7882fb26caaf22066, type: 2}
   - {fileID: 11400000, guid: c552dd7f28a4a4ffe8b7d1144fa8d9b1, type: 2}
+  - {fileID: 11400000, guid: 6166b4910b8934c5fb551cae49bfa2b8, type: 2}
+  - {fileID: 11400000, guid: a19989597c2694921bae3a335e1ec0d7, type: 2}
+  - {fileID: 11400000, guid: b4d073fd6ef1f405fa69f6d10a17b8bc, type: 2}
+  - {fileID: 11400000, guid: 0a7c41c6064cd4118beef5294fa0a788, type: 2}
+  - {fileID: 11400000, guid: ca129c72de5564c09a5d2cf4bbbd6954, type: 2}
+  - {fileID: 11400000, guid: 52a247c546e8c41cfa2e63e7743bbb2a, type: 2}
+  - {fileID: 11400000, guid: 85b97bb332bfa4f46b70a2e221eba86b, type: 2}
+  - {fileID: 11400000, guid: 0e8a7c43b11e44ae1a793ad0a0b88231, type: 2}
+  - {fileID: 11400000, guid: 0b38d49868a1e4b968347667d6b200cf, type: 2}
+  - {fileID: 11400000, guid: dd11c3e6c45c54f9784f4f6423ebd0c9, type: 2}
+  - {fileID: 11400000, guid: 0c9bf4b2c5e0e4da99f72bf9427be827, type: 2}
+  - {fileID: 11400000, guid: a59bd2c7f132744b2bd89567f9fe9012, type: 2}
+  - {fileID: 11400000, guid: 138010796cd0742a595e96349612c170, type: 2}
+  - {fileID: 11400000, guid: e5b59731662164ca286c319710e9f592, type: 2}
+  - {fileID: 11400000, guid: b32a71d91ce5c4fdf98e0f45b4f53ea8, type: 2}
+  - {fileID: 11400000, guid: 313ee569b4a5448f3b68381c4d027996, type: 2}
+  - {fileID: 11400000, guid: 4a4e69dbd99b749728d4b1bdb9c4063b, type: 2}
+  - {fileID: 11400000, guid: 0a8de650d1f224809a3aba6daf792337, type: 2}
+  - {fileID: 11400000, guid: 55cf80b26070040b0b65df68364ccd0f, type: 2}
+  - {fileID: 11400000, guid: adb5dae46960048b49af4dd8defc614b, type: 2}
+  - {fileID: 11400000, guid: cca970e2e0ccb43709ac645ed104fe94, type: 2}
+  - {fileID: 11400000, guid: 0669966bf170d4c78b0287e7663e78b3, type: 2}
+  - {fileID: 11400000, guid: d12bcdfc65a8a4da28b29af424c52026, type: 2}
+  - {fileID: 11400000, guid: 994ed933f147a4ad894d0c64acf97f65, type: 2}
+  sdkApi: 0
   sdkVersion: 
   unityVersion: 
   buildTarget: 
+  assetIndex: {fileID: 0}
