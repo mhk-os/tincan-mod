@@ -54,6 +54,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   hitEffect: {fileID: 11400000, guid: 97442d6a9f0f24fefb51da87c4550d7f, type: 2}
   hitRadius: 3.43
+  propBlastRadius: 3.5
+  propBlastSpeed: 12
   launchSound: {fileID: 8300000, guid: 61f68ab5057548228cbffd0025d38a8b, type: 3}
   flightLoop:
     clip: {fileID: 0}
@@ -76,6 +78,7 @@ MonoBehaviour:
   hitVfxHeight: 0.6
   visual: {fileID: 4112415057310005734}
   joinDistance: 6
+  explodeOnProps: 1
 --- !u!1001 &9027578586318042072
 PrefabInstance:
   m_ObjectHideFlags: 0
