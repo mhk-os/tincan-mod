@@ -48,5 +48,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   aiUsage: 4
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: a5d724e6da724ac0bf8f11476edbd3c5, type: 3}
   family: jammer
