@@ -18,11 +18,11 @@ MonoBehaviour:
   characters: 1
   karts: 0
   onlyId: 
+  optimizeAfterImport: 1
   scale: 1
   trackScales: []
   itemBoxPrefab: {fileID: 6770075183207127768, guid: ec3ccae9ce5f54e178afb3379a48d517, type: 3}
   fixedItems: []
-  ownItemsOnly: 0
   defaultLaps: 3
   defaultPathWidth: 10
   widthSpikeFactor: 2.5
@@ -46,7 +46,6 @@ MonoBehaviour:
   - trackId: tincan.entrancehall
     position: {x: 143.3, y: 81.2, z: 40.7}
     rotation: {x: -0.06108855, y: 0.6697961, z: -0.65702206, w: -0.340534}
-  propMassScale: 5
   ambienceVolume: 0.6
   ambienceMinDistance: 2
   ambienceMaxDistance: 25
@@ -56,22 +55,18 @@ MonoBehaviour:
     gravityIntoGround: 0
   maxCollisionEdge: 100
   chunkLargeMeshes: 1
-  defaultKart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
-  characterKarts:
-  - characterId: tincan.tincan
-    kart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
-  - characterId: tincan.ballboy
-    kart: {fileID: 11400000, guid: 7e0f7fd5e6f8740dd85475ffdf9bf3b9, type: 2}
-  - characterId: tincan.jet
-    kart: {fileID: 11400000, guid: b3de05ad54b80470094636cf80bb7909, type: 2}
-  - characterId: tincan.viper
-    kart: {fileID: 11400000, guid: b3de05ad54b80470094636cf80bb7909, type: 2}
-  - characterId: tincan.rudy
-    kart: {fileID: 11400000, guid: ad44981ff97404a7989968b228511769, type: 2}
-  - characterId: tincan.bob
-    kart: {fileID: 11400000, guid: ad44981ff97404a7989968b228511769, type: 2}
-  - characterId: tincan.mario
-    kart: {fileID: 11400000, guid: 520735d912a77484d8ecc87abc474236, type: 2}
+  finishLineReportDistance: 3
+  minRouteBypass: 0.01
+  maxRouteBypass: 0.5
+  dynamicPropSleepThreshold: 0.1
+  defaultAmbient: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+  defaultSunDirection: {x: 0.3, y: -0.8, z: 0.5}
+  defaultFogDensity: 0.002
+  defaultFogStart: 50
+  defaultFogEnd: 600
+  defaultFarClip: 1000
+  defaultKart: {fileID: 0}
+  characterKarts: []
   characterScale: 0.6
   portraitPattern: ui/portraits/{0}.png
   previewPattern: 

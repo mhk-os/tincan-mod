@@ -17,18 +17,21 @@ MonoBehaviour:
   sourceGame: tincan
   icon: {fileID: 0}
   hidden: 0
+  reaction: {fileID: 0}
+  overrides: []
   duration: 10
   durationFromAnimation: 0
   refreshOnReapply: 1
   exclusiveBuff: 1
   accelerationMultiplier: 1
-  maxSpeedMultiplier: 1.35
+  maxSpeedMultiplier: 1.2
   modifiersMinSpeed: 0
   steeringMultiplier: 1
   gripMultiplier: 1
   forwardImpulse: 0
   velocityRetain: 1
   velocityDamping: 0
+  snapToTopSpeed: 0
   lockControls: 0
   forceThrottle: 0
   blockThrottle: 0
@@ -39,6 +42,7 @@ MonoBehaviour:
   upwardImpulse: 0
   respawnOnEnd: 0
   respawnBackDistance: 15
+  endOnRespawn: 0
   gravityMultiplier: 1
   landingEffect: {fileID: 0}
   endOnLanding: 0
@@ -49,6 +53,8 @@ MonoBehaviour:
   survivesHits: 0
   ghost: 0
   runOver: 0
+  hideKart: 0
+  hideDelay: 0
   damage: -1
   heal: 0
   damageDealtMultiplier: 1
@@ -57,6 +63,8 @@ MonoBehaviour:
   verticalScale: 1
   auraEffect: {fileID: 11400000, guid: 91842c7cfe0754d53babbfd18b309d7a, type: 2}
   auraRadius: 1.75
+  ploughsThrough: 1
+  propKnockSpeed: 8
   attachedVfxPrefab: {fileID: 1613187675267845049, guid: 68400046ef47241fb9fa08433c180b41, type: 3}
   attachToVisual: 1
   attachMount: 1
@@ -69,5 +77,24 @@ MonoBehaviour:
   endSound: {fileID: 0}
   screenOverlay: {r: 1, g: 1, b: 1, a: 0}
   burnVisual: 0
+  modelTint: {r: 1, g: 1, b: 1, a: 0}
+  hideWheels: 0
+  glitchVisual: 0
+  starVisual: 0
+  bodyBob:
+    height: 0
+    raise: 0
+    frequency: 6
+    shape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sway: 0
+    pitch: 0
+    roll: 0
+    fadeIn: 0.1
+    fadeOut: 0.3
   endVfxPrefab: {fileID: 0}
   cameraFovBoost: 0

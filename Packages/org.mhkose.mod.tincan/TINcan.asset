@@ -37,6 +37,8 @@ MonoBehaviour:
   itemPickupSound: {fileID: 8300000, guid: de57afcc06c2b4b35a9ab97c19bfa35c, type: 3}
   scratchSound: {fileID: 0}
   offroadLoop: {fileID: 0}
+  finishCheerSound: {fileID: 0}
+  finishBooSound: {fileID: 0}
   content:
   - {fileID: 11400000, guid: 3b62cabaa3d7d424a9d3cda7da853807, type: 2}
   - {fileID: 11400000, guid: 508e90b9a88f64aaf84ee5b183dd60d3, type: 2}
@@ -94,6 +96,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0669966bf170d4c78b0287e7663e78b3, type: 2}
   - {fileID: 11400000, guid: d12bcdfc65a8a4da28b29af424c52026, type: 2}
   - {fileID: 11400000, guid: 994ed933f147a4ad894d0c64acf97f65, type: 2}
+  - {fileID: 11400000, guid: 6384884958b9e429c9edb74d65cb8828, type: 2}
+  - {fileID: 11400000, guid: 4b4be7bcf250f458a9aae536fa27da35, type: 2}
+  - {fileID: 11400000, guid: e2b11ff8f174d49868678c1c168be6c3, type: 2}
+  - {fileID: 11400000, guid: 10363a39331124e27a7b87f0e000ea6d, type: 2}
+  - {fileID: 11400000, guid: a928ebcac01f0401598f9bcbffe79440, type: 2}
+  - {fileID: 11400000, guid: 8e23a95830140422e9e94626e90c909e, type: 2}
+  - {fileID: 11400000, guid: 8af227fa818384a5b9c86e9e59488dda, type: 2}
+  - {fileID: 11400000, guid: bf7ee45b5ac5a4dc6ae7060757c23462, type: 2}
+  - {fileID: 11400000, guid: 7c55ee004321241e19d79a43f1c818bb, type: 2}
+  - {fileID: 11400000, guid: 5adab78e41d4a48c087d062fa49779f4, type: 2}
+  - {fileID: 11400000, guid: 479567415049e42a79aa06b10538c78a, type: 2}
+  - {fileID: 11400000, guid: 5519bd62b7d9441f9bd4fca785a10e33, type: 2}
+  - {fileID: 11400000, guid: 549e0152da4c7497d8872c701492e598, type: 2}
+  - {fileID: 11400000, guid: f91ce6984e58944b89c110aebb109469, type: 2}
   sdkApi: 0
   sdkVersion: 
   unityVersion: 
