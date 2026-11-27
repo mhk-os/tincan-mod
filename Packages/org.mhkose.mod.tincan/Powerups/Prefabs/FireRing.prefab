@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5386433698637759136}
   - component: {fileID: 8600542129099445353}
   m_Layer: 0
-  m_Name: FlameThrower
+  m_Name: FireRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406dd5013b73f4e1cb534c1918c06502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MHK.Runtime::MHK.Powerups.AreaEffectPowerup
+  soundVolume: 1
   radius: 11.14
   gravity: 0
   coreRadius: 8
@@ -91,6 +92,7 @@ MonoBehaviour:
   destroyOnCoreHit: 0
   growTime: 0.5
   followOwner: 1
+  coneAngle: 360
   idleLoop:
     clip: {fileID: 0}
     volume: 1
@@ -98,7 +100,6 @@ MonoBehaviour:
     maxDistance: 30
   hitSound: {fileID: 0}
   expireSound: {fileID: 0}
-  soundVolume: 1
 --- !u!1001 &408337835779186759
 PrefabInstance:
   m_ObjectHideFlags: 0

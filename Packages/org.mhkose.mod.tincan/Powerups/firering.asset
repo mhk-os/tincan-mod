@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c577fa5f529d743bfaeca46e56187d2f, type: 3}
-  m_Name: flamethrower
+  m_Name: firering
   m_EditorClassIdentifier: MHK.Runtime::MHK.Modding.PowerupDefinition
-  id: tincan.flamethrower
-  displayName: Flame Thrower
+  id: tincan.firering
+  displayName: Fire Ring
   sourceGame: tincan
   icon: {fileID: 2800000, guid: c586e1060ce7741db8b17c57c4331775, type: 3}
   hidden: 0
@@ -21,8 +21,10 @@ MonoBehaviour:
   heldPrefab: {fileID: 0}
   heldMount: 0
   charges: 1
+  battleCharges: 0
   useCooldown: 0
   excludeFromItemBoxes: 0
+  battleOnly: 0
   weightByPosition:
     serializedVersion: 2
     m_Curve:
